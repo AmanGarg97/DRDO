@@ -1,0 +1,293 @@
+.navbar{
+
+    background-color: #222020;
+
+}
+
+/* new editing */
+
+.bpit-nav{
+    color: rgb(41, 41, 212);
+    font-size: 130%;
+}
+
+.search-nav{
+    color: rgb(197, 28, 28);
+    font-size: 130%;
+}
+
+#menu-div{
+    color: white;
+    font-size: 120%;
+}
+
+.pd{
+    margin-left: 1.4%;
+}
+
+#details-body{
+    background-image: url("Dark-Grey-Background.jpg");
+}
+
+.formbox1{
+    background-image: url("white-back.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 55%;
+    height: 1050px;
+    margin-top: 1.5%;
+    border-radius: 10px;
+}
+
+#personal-heading{
+    text-align: center;
+    padding-top: 2%;
+    font-family: Impact, fantasy;
+}
+
+.personal-form{
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+#enroll-numb{
+    font-size: 120%;
+}
+
+#Eno{
+    width: 30%;
+    border: 1px solid black;
+}
+
+#name{
+    font-size: 120%;
+}
+
+#name-input{
+    border: 1px solid black;
+}
+
+#birth-date{
+    font-size: 120%;
+}
+
+#dob{
+    width: 30%;
+    border: 1px solid black;
+}
+
+#gender{
+    font-size: 120%;
+}
+
+#gend{
+    font-size: 105%;
+}
+
+#father{
+    font-size: 120%;
+}
+
+#fa-name{
+    border: 1px solid black;
+}
+
+#mother{
+    font-size: 120%;
+}
+
+#ma-name{
+    border: 1px solid black;
+}
+
+#add{
+    font-size: 120%;
+}
+
+#add1{
+    border: 1px solid black;
+}
+
+#state{
+    font-size: 120%;
+}
+
+#state1{
+    border: 1px solid black;
+    width: 50%;
+}
+
+#pin-code{
+    font-size: 120%;
+}
+
+#pincode{
+    border: 1px solid black;
+    width: 50%;
+}
+
+#tel-no{
+    font-size: 120%;
+}
+
+#telephone{
+    width: 30%;
+    border: 1px solid black;
+}
+
+#phone{
+    font-size: 120%;
+}
+
+#phn-no{
+    width: 65%;
+    border: 1px solid black;
+}
+
+#e-mail{
+    font-size: 120%;
+}
+
+#email{
+    width: 82%;
+    border: 1px solid black;
+}
+
+.formbox2{
+    background-image: url("white-back.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 55%;
+    height: 500px;
+    margin-top: 1.5%;
+    border-radius: 10px;
+}
+
+#academic-heading{
+    text-align: center;
+    padding-top: 2%;
+    font-family: Impact, fantasy;
+}
+
+#year{
+    font-size: 120%;
+}
+
+#adm{
+    width: 50%;
+    border: 1px solid black;
+}
+
+#pass{
+    width: 50%;
+    border: 1px solid black;
+}
+
+#branch{
+    font-size: 120%;
+}
+
+#inputState{
+    border: 1px solid black;
+    width: 60%;
+}
+
+#specs{
+    font-size: 120%;
+}
+
+#spec{
+    border: 1px solid black;
+}
+
+.formbox3{
+    background-image: url("white-back.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 55%;
+    height: 700px;
+    margin-top: 1.5%;
+    border-radius: 10px;
+}
+
+#profession-heading{
+    text-align: center;
+    padding-top: 2%;
+    font-family: Impact, fantasy;
+}
+
+#current-heading{
+    font-size: 140%;
+}
+
+#compname{
+    font-size: 115%;
+}
+
+#comp{
+    border: 1px solid black;
+}
+
+#position{
+    font-size: 115%;
+}
+
+#pos{
+    border: 1px solid black;
+}
+
+#from{
+    font-size: 115%;
+}
+
+#date{
+    border: 1px solid black;
+    width: 89%;
+}
+
+#to{
+    font-size: 115%;
+}
+
+#prev{
+    border: 1px solid black;
+}
+
+#dte{
+    border: 1px solid black;
+    width: 89%;
+}
+
+#dt{
+    border: 1px solid black;
+    width: 89%;
+}
+
+#btn{
+    font-size: 120%;
+    background-color: black;
+    color: white;
+}
+
+.formbox4{
+    background-image: url("white-back.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 380px;
+    margin-top: 1.5%;
+    border-radius: 10px;
+}
+
+#set-pass{
+    text-align: center;
+    padding-top: 2%;
+    font-family: Impact, fantasy;
+}
+
+.personal-form-pass{
+    margin-left: 32%;
+}
