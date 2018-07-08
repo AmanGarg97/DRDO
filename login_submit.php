@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+  header('location:login_stud.php'); 
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,13 +19,14 @@
     
     <link rel="stylesheet" href="style1.css">
 
-    <title>BPIT Search</title>
+    <title>Profile</title>
 </head>
-<body class="searchbody">
+<body>
     
+
     <!-- navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light searchnav">
-        
+    <nav class="navbar navbar-expand-lg status">
+        <a class="navbar-brand" href="index.html"><span class="bpithead">BPIT </span><span class="searchhead">Search</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
          data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" 
          aria-label="Toggle navigation">
@@ -28,34 +35,44 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">  
             <ul class="navbar-nav ml-auto">
                 <div class="dropdown">
-                    <button class="dropbtn" id="login">Login</button>
+                    <button class="dropbtn username" id="login">
+                      Hi! <?php echo $_SESSION['username']; ?>
+                    </button>
                     <div class="dropdown-content">
-                        <a href="login_stud.html">Student</a>
-                        <a href="login_admin.html">Admin</a>
+                        <a href="logout.php">Logout</a>
                     </div>
-                </div>&nbsp;&nbsp;&nbsp;
-                <li class="nav-item">
-                  <a class="nav-link" id="signup" href="form1.html">Sign Up</a>
-                </li>
+                </div>
             </ul>
         </div>
     </nav>
     <br><br><br>
 
-    <h1><span class="bpit">BPIT</span><span class="srch"> Search</span></h1><br>
+    <div class="container">
 
-    <!-- search button and icon -->
-    <div class="box">
-        <div class="inner-addon right-addon">
-            <i class="fas fa-search"></i>      
-            <input type="search" id="search" class="shadow">
+        <div class="col-">
+
+                <table class="table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Form_id</th>
+                            <th scope="col" colspan="2">Details</th>
+                            <th scope="col">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td><a href="#" class="details">Review Form</a></td>
+                            <td><a href="#" class="details">Update</a></td>
+                            <td><?php echo $_SESSION['status']; ?></td>
+                          </tr>
+                        </tbody>
+                    </table>
         </div>
-        <br><br>
-        <button type="submit" class="btn" id="btn">Search</button>
+        
+        
     </div>
-   
-   
-    <script src="script.js"></script>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 

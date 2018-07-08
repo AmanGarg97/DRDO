@@ -19,14 +19,17 @@
     <div class="container loginbox">
         <h3 id="login-heading">STUDENT LOGIN</h3>
         <br><br>
-        <form method="" action="">
+        <form method="post" action="login_submit_backend.php">
             <div id="login-form">
-                <input class="form-control" id="eno" type="number" placeholder="Enrollment No." name="enroll" required>
+              <input id="Eno" type="number" class="form-control" name="enroll">
                 <br>
-                <input class="form-control" id="pass" type="password" placeholder="Password" name="psws" required>
+                <input class="form-control" id="pass" type="password" placeholder="Password" name="pass">
                 <br>
+<!--
                 <button class="btn login-btn" id="loginbtn" 
                 onclick="window.open('after_login.html')">LOGIN</button>
+-->
+               <button>SUBMIT</button>
                 <br><br><br>
             </div>
             <span class="psws">Forgot <a href="" id="pswrd">Password?</a></span>

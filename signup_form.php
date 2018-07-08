@@ -301,7 +301,7 @@ include 'common.php';
             <br>
 
             <button type="submit" class="btn" id="btn" 
-            onclick="window.open('status.html')">Submit</button>
+            onclick="window.open('index.html')">Submit</button>
 
         </div>
 
