@@ -38,9 +38,9 @@
     </nav>
     <br><br>
 
-    <div class="container" id="print-content">
+    <div class="container d-print-block">
         <div class="row">
-            <div class="col-12 review-form shadow-lg p-3 mb-5 bg-white rounded">
+            <div class="col-12 review-form">
                 <form action="" method="">
                     <div class="row">                   
                         <div class="col-lg-12">
@@ -52,14 +52,14 @@
 
                     <!-- Personal Details -->
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 d-print-block">
                             <h4 class="personal-heading">PERSONAL DETAILS</h4>
                         </div>
                     </div>
                     <br><br>
-                    <div class="details-box"> 
+                    <div class="details-box d-print-inline-block"> 
                         <dl class="row">
-                            <div class="col-md-9">
+                            <div class="col-md-10">
                                 <div class="row">
                                 <dt class="col-sm-6 detail"><p>Enrollment No.</p></dt>
                                 <dd class="col-sm-4 input"><p>01620802716</p></dd>
@@ -99,7 +99,7 @@
                             </div>
 
                             <!-- profile image -->
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                                 <div class="profile-box"></div>
                             </div>
 
@@ -116,17 +116,29 @@
                     <br><br>
                     <div class="details-box">
                             <dl class="row">
-                                <dt class="col-sm-5 detail"><p>Year of Admission</p></dt>
-                                <dd class="col-sm-6 input"><p>2016</p></dd>
+                                <div class="col-md-10">
+
+                                    <div class="row">
+                                            <dt class="col-sm-6 detail"><p>Year of Admission</p></dt>
+                                            <dd class="col-sm-4 input"><p>2016</p></dd>
+        
+                                    </div>
+                                    <div class="row">
+                                            <dt class="col-sm-6 detail"><p>Year of Passing Out</p></dt>
+                                            <dd class="col-sm-4 input"><p>2020</p></dd>
+                                    </div>                                   
+                                    <div class="row">
+                                            <dt class="col-sm-6 detail"><p>Branch</p></dt>
+                                            <dd class="col-sm-4 input"><p>CSE</p></dd>
+                                    </div>
+                                    <div class="row">
+                                            <dt class="col-sm-6 detail"><p>Specialization</p></dt>
+                                            <dd class="col-sm-4 input"><p>Web Developer</p></dd>
+                                    </div>
     
-                                <dt class="col-sm-5 detail"><p>Year of Passing Out</p></dt>
-                                <dd class="col-sm-6 input"><p>2020</p></dd>
-    
-                                <dt class="col-sm-5 detail"><p>Branch</p></dt>
-                                <dd class="col-sm-6 input"><p>CSE</p></dd>
-    
-                                <dt class="col-sm-5 detail"><p>Specialization</p></dt>
-                                <dd class="col-sm-6 input"><p>Web Developer</p></dd>
+                                    
+                                </div>
+                                
                             </dl>
                     </div>
                     <br><br>
@@ -140,33 +152,36 @@
                     <br><br>
                     <div class="details-box">
                         <dl class="row">
-                            <dt class="col-sm-5 detail"><p>Company Name</p></dt>
-                            <dd class="col-sm-6 input"><p>xuz</p></dd>
-        
-                            <dt class="col-sm-5 detail"><p>From</p></dt>
-                            <dd class="col-sm-6 input"><p>2000</p></dd>
-        
-                            <dt class="col-sm-5 detail"><p>To</p></dt>
-                            <dd class="col-sm-6 input"><p>Present</p></dd>
+                            <div class="col-md-10">
+                                <div class="row">
+                                        <dt class="col-sm-6 detail"><p>Company Name</p></dt>
+                                        <dd class="col-sm-4 input"><p>xuz</p></dd>
+    
+                                </div>
+                                <div class="row">
+                                        <dt class="col-sm-6 detail"><p>From</p></dt>
+                                        <dd class="col-sm-4 input"><p>2000</p></dd>
+    
+                                </div>
+                                <div class="row">
+                                        <dt class="col-sm-6 detail"><p>To</p></dt>
+                                        <dd class="col-sm-4 input"><p>Present</p></dd>
+    
+                                </div>
+                                                    
+                                                   
+                            </div>
+                            
                         </dl>
                     </div>
+
+                    <input type="button" value="Print" class="print" onclick="window.print()">
                 </form>
             </div>
-
-            <input type="button" value="print" onclick="printDiv('print-content')">
+            
+            
     </div>
     <br><br>
-
-    <script type="text/javascript">
-        function printDiv(divName) {
-
- var printContents = document.getElementById(divName).innerHTML;
- w=window.open();
- w.document.write(printContents);
- w.print();
- w.close();
-}
-
     
     </script>
 

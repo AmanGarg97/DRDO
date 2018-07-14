@@ -93,6 +93,7 @@
 .review-form{
     border: 1px solid rgb(97, 91, 91);
     height: 1600px;
+    box-shadow: 1px 3px 5px 6px rgb(223, 211, 211);
 }
 
 .heading{
@@ -134,11 +135,32 @@ hr{
     width: 150px;
 }
 
-#print{
-    left: 45%;
+.print{
     position: relative;
+    left: 45%;
 }
 
+@media print{
+    title{
+        display: none;
+    }
+    *{
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    .print{
+        display: none;
+    }
+
+    .review-form{
+        border: none;
+        box-shadow: none;
+    }
+    .details-box{
+        margin-left: 5%;
+    }
+}
 
 
 
