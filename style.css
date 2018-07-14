@@ -53,32 +53,56 @@
 
 #enroll-numb{
     font-size: 120%;
+    font-weight: bold;
 }
 
 #Eno{
-    width: 30%;
+    width: 60%;
     border: 1px solid black;
+}
+
+#pro-pic{
+    font-size: 120%;
+    font-weight: bold;
+}
+
+#inputGroupFile02{
+    width: 60%;
+}
+  
+.input-group {
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 #name{
     font-size: 120%;
+    font-weight: bold;
 }
 
-#name-input{
+#name-input-first{
+    width: 60%;
+    border: 1px solid black;
+}
+
+#name-input-last{
+    width: 60%;
     border: 1px solid black;
 }
 
 #birth-date{
     font-size: 120%;
+    font-weight: bold;
 }
 
 #dob{
-    width: 30%;
+    width: 25%;
     border: 1px solid black;
 }
 
 #gender{
     font-size: 120%;
+    font-weight: bold;
 }
 
 #gend{
@@ -87,30 +111,37 @@
 
 #father{
     font-size: 120%;
+    font-weight: bold;
 }
 
 #fa-name{
+    width: 70%;
     border: 1px solid black;
 }
 
 #mother{
     font-size: 120%;
+    font-weight: bold;
 }
 
 #ma-name{
+    width: 70%;
     border: 1px solid black;
 }
 
 #add{
     font-size: 120%;
+    font-weight: bold;
 }
 
 #add1{
+    width: 60%;
     border: 1px solid black;
 }
 
 #state{
     font-size: 120%;
+    font-weight: bold;
 }
 
 #state1{
@@ -120,6 +151,7 @@
 
 #pin-code{
     font-size: 120%;
+    font-weight: bold;
 }
 
 #pincode{
@@ -129,24 +161,27 @@
 
 #tel-no{
     font-size: 120%;
+    font-weight: bold;
 }
 
 #telephone{
-    width: 30%;
+    width: 26%;
     border: 1px solid black;
 }
 
 #phone{
     font-size: 120%;
+    font-weight: bold;
 }
 
 #phn-no{
-    width: 65%;
+    width: 60%;
     border: 1px solid black;
 }
 
 #e-mail{
     font-size: 120%;
+    font-weight: bold;
 }
 
 #email{
@@ -173,6 +208,7 @@
 
 #year{
     font-size: 120%;
+    font-weight: bold;
 }
 
 #adm{
@@ -187,15 +223,17 @@
 
 #branch{
     font-size: 120%;
+    font-weight: bold;
 }
 
 #inputState{
     border: 1px solid black;
-    width: 60%;
+    width: 30%;
 }
 
 #specs{
     font-size: 120%;
+    font-weight: bold;
 }
 
 #spec{
@@ -221,10 +259,12 @@
 
 #current-heading{
     font-size: 140%;
+    font-weight: bold;
 }
 
 #compname{
     font-size: 115%;
+    font-weight: bold;
 }
 
 #comp{
@@ -233,6 +273,7 @@
 
 #position{
     font-size: 115%;
+    font-weight: bold;
 }
 
 #pos{
@@ -241,6 +282,7 @@
 
 #from{
     font-size: 115%;
+    font-weight: bold;
 }
 
 #date{
@@ -250,6 +292,7 @@
 
 #to{
     font-size: 115%;
+    font-weight: bold;
 }
 
 #prev{

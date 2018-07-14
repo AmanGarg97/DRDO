@@ -15,13 +15,19 @@
     <title>Login Admin</title>
 </head>
 <body id="loginbody">
+
+<nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand sticky-top" id="nav" href="index.html">
+                <span class="bpit-nav">BPIT </span><span class="search-nav">Search</span>        
+            </a>
+        </nav>
     
     <div class="container loginbox">
         <h3 id="login-heading">ADMIN LOGIN</h3>
         <br><br>
         <form method="" action="">
             <div id="login-form">
-                <input class="form-control" id="eno" type="number" placeholder="Admin ID" name="admnid" required>
+                <input class="form-control" id="Eno" type="number" placeholder="Admin ID" name="admnid" required>
                 <br>
                 <input class="form-control" id="pass" type="password" placeholder="Password" name="pswa" required>
                 <br>

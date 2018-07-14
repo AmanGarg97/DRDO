@@ -57,26 +57,47 @@ include 'common.php';
 
         <h2 id="personal-heading">PERSONAL DETAILS</h2><br>
         
-        <form action="enter.php" method="post" class="form" role="form">
+        <form action="enter.php" method="post" class="form" role="form" enctype="multipart/form-data">
 
             <div class="personal-form">
 
-                <!-- Enrollment no -->
-                <div>
-                    <label for="Eno" id="enroll-numb">Enrollment Number</label><br>
-                    <input id="Eno" type="number" class="form-control" name="enroll">
-                </div>
+                <!-- Enrollment no and profile picture -->
+                <div class="row">
+                    <div class="col">
+                        <label for="Eno" id="enroll-numb">Enrollment Number</label><br>
+                        <div class="row">
+                            <div class="col">
+                                <input id="Eno" type="number" class="form-control" name="enroll">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="profile-img" id="pro-pic">Profile Picture</label>
+                        <div class="row">
+                            <div class="col upload-btn-wrapper">
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" 
+                                        id="inputGroupFile02" name="profile-img">
+                                        <label class="custom-file-label" for="inputGroupFile02" 
+                                        aria-describedby="inputGroupFileAddon02">Choose file..</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
                 <br>
 
                 <!-- name -->
                 <label for="name-input" id="name">Name</label>
                 <div class="row">
                     <div class="col">
-                        <input id="name-input" type="text" class="form-control" placeholder="First name"
+                        <input id="name-input-first" type="text" class="form-control" placeholder="First name"
                         name="firstname">
                     </div>
                     <div class="col">
-                        <input id="name-input" type="text" class="form-control" placeholder="Last name" 
+                        <input id="name-input-last" type="text" class="form-control" placeholder="Last name" 
                         name="lastname">
                     </div>
                 </div>
@@ -199,8 +220,10 @@ include 'common.php';
             <label for="inputState" id="branch">Branch</label>
             <select id="inputState" class="form-control" name="branch">
                 <option selected>Choose...</option>
-                <option>CSE</option>
-                <option>ECE</option>
+                <option>CSE-A</option>
+                <option>CSE-B</option>
+                <option>ECE-A</option>
+                <option>ECE-B</option>
                 <option>IT</option>
                 <option>EEE</option>
             </select><br>
@@ -209,7 +232,7 @@ include 'common.php';
 
             <!-- specialization -->
             <label for="spec" id="specs">Specialization</label><br>
-            <textarea rows="4" cols="70" id="spec" name="spec"></textarea>
+            <textarea rows="2" cols="40" id="spec" name="spec"></textarea>
             <br><br>
 
         </div>
@@ -304,10 +327,10 @@ include 'common.php';
             onclick="window.open('index.html')">Submit</button>
 
         </div>
-
     </div>
     <br>
 
+<br><br>    
     <!-- DIV 4 ENDS -->
     </form>
   

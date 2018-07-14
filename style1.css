@@ -1,3 +1,21 @@
+.navbar{
+
+    background-color: #222020;
+
+}
+
+/* new editing */
+
+.bpit-nav{
+    color: rgb(41, 41, 212);
+    font-size: 130%;
+}
+
+.search-nav{
+    color: rgb(197, 28, 28);
+    font-size: 130%;
+}
+
 .dropbtn {
     background-color: rgb(44, 46, 44);
     padding-top: 13%;
@@ -166,7 +184,7 @@ h1{
     margin-left: 17%;
 }
 
-#eno{
+#Eno{
    width: 80%;
    border-radius: 18px;
 }

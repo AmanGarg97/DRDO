@@ -16,12 +16,18 @@
 </head>
 <body id="loginbody">
     
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand sticky-top" id="nav" href="index.html">
+                <span class="bpit-nav">BPIT </span><span class="search-nav">Search</span>        
+            </a>
+        </nav>
+
     <div class="container loginbox">
         <h3 id="login-heading">STUDENT LOGIN</h3>
         <br><br>
         <form method="post" action="login_submit_backend.php">
             <div id="login-form">
-              <input id="Eno" type="number" class="form-control" name="enroll">
+              <input id="Eno" type="number" class="form-control" name="enroll" placeholder="Enrollment No.">
                 <br>
                 <input class="form-control" id="pass" type="password" placeholder="Password" name="pass">
                 <br>
@@ -29,7 +35,7 @@
                 <button class="btn login-btn" id="loginbtn" 
                 onclick="window.open('after_login.html')">LOGIN</button>
 -->
-               <button>SUBMIT</button>
+               <button class="btn login-btn">LOGIN</button>
                 <br><br><br>
             </div>
             <span class="psws">Forgot <a href="" id="pswrd">Password?</a></span>
