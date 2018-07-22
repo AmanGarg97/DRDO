@@ -216,14 +216,16 @@ include 'common.php';
             </div>
 -->
             <label for="telephone" id="tel-no">Tel-No</label><br>
-            <input id="telephone" type="tel" class="form-control" name="telno">
+            <input id="telephone" type="tel" class="form-control" name="telno" 
+            pattern="[0-6]{3}-[0-9]{8}" placeholder="011-25252525" maxlength="12">
             <br>
 
             <!-- phone no and email address -->
             <div class="row">
                 <div class="col">
                     <label for="phn-no" id="phone">Phone No.</label><br>
-                    <input id="phn-no" type="tel" class="form-control" name="phone">
+                    <input id="phn-no" type="tel" class="form-control" name="phone" 
+                    pattern="[0-9]{10}" maxlength="10">
                 </div>
     
                 <div class="col">
