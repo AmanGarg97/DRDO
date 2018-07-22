@@ -57,7 +57,7 @@ include 'common.php';
 
         <h2 id="personal-heading">PERSONAL DETAILS</h2><br>
         
-        <form action="enter.php" method="post" class="form" role="form" enctype="multipart/form-data">
+        <form action="" method="post" class="form" role="form" enctype="multipart/form-data">
 
             <div class="personal-form">
 
@@ -72,20 +72,61 @@ include 'common.php';
                         </div>
                     </div>
                     <div class="col">
-                        <label for="profile-img" id="pro-pic">Profile Picture</label>
+                        <label for="image" id="pro-pic">Profile Picture</label>
+<!--
                         <div class="row">
                             <div class="col upload-btn-wrapper">
                                 <div class="input-group">
                                     <div class="custom-file">
                                         <input type="file" class="custom-file-input" 
-                                        id="inputGroupFile02" name="profile-img">
+                                        id="inputGroupFile02" name="image">
                                         <label class="custom-file-label" for="inputGroupFile02" 
                                         aria-describedby="inputGroupFileAddon02">Choose file..</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
+-->
+                   <input type="file" name="image" />
+                      <br/><br/>
+                      <input type="submit" name="submit" value="upload" />
+                      
                     </div>
+                    <?php
+                  if(isset($_POST['submit'])){
+                    
+                    if(getimagesize($_FILES['image']['tmp_name']) == FALSE){
+                      echo "Please select an image";
+                    }
+                  
+                  else{
+                                  
+
+                    $image=addslashes($_FILES['image']['tmp_name']);
+                    $name=addslashes($_FILES['image']['name']);
+                    $image=file_get_contents($image);
+                    $image=base64_encode($image);
+                  }
+                  }
+                  
+                  function saveimage()
+                  {
+                    echo "aman";
+                    $con = mysqli_connect("localhost" , "root" , "" ,"personal_details") or die(mysqli_error($con));
+
+                    $qry="insert into students(name,image) values('$name','$image') where enroll_id=12345";
+                    $result = mysqli_query($con,$qry);
+                    
+                    if($result){
+                      echo "Image uploaded";
+                      
+                    }
+                    else{
+                      echo "Image is not uploaded";
+                    }
+                  }
+                  
+                  ?>
                  </div>
                 <br>
 

@@ -62,9 +62,9 @@ if(!isset($_SESSION['username'])){
                         <tbody>
                           <tr>
                             <th scope="row">1</th>
-                            <td><a href="#" class="details">Review Form</a></td>
+                            <td><a href="review-form.php" class="details">Review Form</a></td>
                             <td><a href="#" class="details">Update</a></td>
-                            <td><?php echo $_SESSION['status']; ?></td>
+                            <td><?php echo $_SESSION['enroll_id']; ?></td>
                           </tr>
                         </tbody>
                     </table>

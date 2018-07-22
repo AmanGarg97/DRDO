@@ -12,8 +12,9 @@ $mname = mysqli_real_escape_string( $con , $_POST['mname']);
 $add = mysqli_real_escape_string( $con , $_POST['add']);
 $city = mysqli_real_escape_string( $con , $_POST['city']);
 $pincode = mysqli_real_escape_string( $con , $_POST['pin']);
+
 $b_date =   $_POST['bdate'];
-//$gender = $_POST['gen'];
+$gender = $_POST['gen'];
 $phone = $_POST['phone'];
 $tele = $_POST['telno'];
 $adm_year = $_POST['adm'];
@@ -35,6 +36,7 @@ die($user_registration_query2);
 $user_registration_submit = mysqli_query($con,$user_registration_query2) or die(mysqli_error($con));
 echo "User Succesfully Inserted";
 $_SESSION['username'] = $username;
-$_SESSION['id'] = mysqli_insert_id($con);
+$_SESSION['enroll_id'] = $enroll_id;
 
+$_SESSION['id'] = mysqli_insert_id($con);
 ?>

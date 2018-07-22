@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,13 +34,14 @@
                       Hi! <?php echo $_SESSION['username']; ?>
                     </button>
                     <div class="dropdown-content">
-                        <a href="logout.php">Logout</a>
+                        <a href="#">Logout</a>
                     </div>
                 </div>
             </ul>
         </div>
     </nav>
     <br><br>
+    
 
     <div class="container d-print-block">
         <div class="row">
@@ -52,9 +57,10 @@
 
                     <!-- Personal Details -->
                     <div class="row">
-                        <div class="col-lg-12 d-print-block">
+                        <div class="col-lg-10 d-print-block">
                             <h4 class="personal-heading">PERSONAL DETAILS</h4>
                         </div>
+                        <div class="col-lg-2"><?php echo $_SESSION['date'];  ?></div>
                     </div>
                     <br><br>
                     <div class="details-box d-print-inline-block"> 
@@ -62,39 +68,43 @@
                             <div class="col-md-10">
                                 <div class="row">
                                 <dt class="col-sm-6 detail"><p>Enrollment No.</p></dt>
-                                <dd class="col-sm-4 input"><p>01620802716</p></dd>
+                                <dd class="col-sm-4 input"><p><?php echo $_SESSION['enroll_id']; ?></p></dd>
                                 </div>
                                 <div class="row">
                                 <dt class="col-sm-6 detail"><p>Name</p></dt>
-                                <dd class="col-sm-4 input"><p>Chirag Barka</p></dd>
+                                <dd class="col-sm-4 input"><p><?php echo $_SESSION['username']; ?></p></dd>
                                 </div>
                                 <div class="row">
                                 <dt class="col-sm-6 detail"><p>Birth date</p></dt>
-                                <dd class="col-sm-4 input"><p>06/01/1998</p></dd>
+                                <dd class="col-sm-4 input"><p><?php
+                                
+                                 echo $_SESSION['b_day'];
+                                  ?>
+                                </p></dd>
                                 </div>
                                 <div class="row">
-                                <dt class="col-sm-6 detail"><p>Gender.</p></dt>
-                                <dd class="col-sm-4 input"><p>Male</p></dd>
+                                <dt class="col-sm-6 detail"><p>Gender</p></dt>
+                                <dd class="col-sm-4 input"><p><?php echo $_SESSION['gen']; ?></p></dd>
                                 </div>
                                 <div class="row">
                                 <dt class="col-sm-6 detail"><p>Father's Name</p></dt>
-                                <dd class="col-sm-4 input"><p>Poonam Singh Barka</p></dd>
+                                <dd class="col-sm-4 input"><p><?php echo $_SESSION['fname']; ?></p></dd>
                                 </div>
                                 <div class="row">
                                 <dt class="col-sm-6 detail"><p>Mother's Name</p></dt>
-                                <dd class="col-sm-4 input"><p>Nirmal Barka</p></dd>
+                                <dd class="col-sm-4 input"><p><?php echo $_SESSION['mname']; ?></p></dd>
                                 </div>
                                 <div class="row">
                                 <dt class="col-sm-6 detail"><p>Address</p></dt>
-                                <dd class="col-sm-4 input"><p>A-6/33 Sector-111 Rohini Delhi-110022</p></dd>
+                                <dd class="col-sm-4 input"><p><?php echo $_SESSION['add']; ?></p></dd>
                                 </div>
                                 <div class="row">
                                 <dt class="col-sm-6 detail"><p>Tel-No.</p></dt>
-                                <dd class="col-sm-4 input"><p>011-23232323</p></dd>
+                                <dd class="col-sm-4 input"><p><?php echo $_SESSION['tel']; ?></p></dd>
                                 </div>
                                 <div class="row">
                                 <dt class="col-sm-6 detail"><p>Phone No.</p></dt>
-                                <dd class="col-sm-4 input"><p>9899856565</p></dd>
+                                <dd class="col-sm-4 input"><p><?php echo $_SESSION['phone']; ?></p></dd>
                                 </div>
                             </div>
 
@@ -120,20 +130,20 @@
 
                                     <div class="row">
                                             <dt class="col-sm-6 detail"><p>Year of Admission</p></dt>
-                                            <dd class="col-sm-4 input"><p>2016</p></dd>
+                                            <dd class="col-sm-4 input"><p><?php echo $_SESSION['admyear']?></p></dd>
         
                                     </div>
                                     <div class="row">
                                             <dt class="col-sm-6 detail"><p>Year of Passing Out</p></dt>
-                                            <dd class="col-sm-4 input"><p>2020</p></dd>
+                                            <dd class="col-sm-4 input"><p><?php echo $_SESSION['passyear']?></p></dd>
                                     </div>                                   
                                     <div class="row">
                                             <dt class="col-sm-6 detail"><p>Branch</p></dt>
-                                            <dd class="col-sm-4 input"><p>CSE</p></dd>
+                                            <dd class="col-sm-4 input"><p><?php echo $_SESSION['branch']?></p></dd>
                                     </div>
                                     <div class="row">
                                             <dt class="col-sm-6 detail"><p>Specialization</p></dt>
-                                            <dd class="col-sm-4 input"><p>Web Developer</p></dd>
+                                            <dd class="col-sm-4 input"><p><?php echo $_SESSION['spec']?></p></dd>
                                     </div>
     
                                     
@@ -155,20 +165,10 @@
                             <div class="col-md-10">
                                 <div class="row">
                                         <dt class="col-sm-6 detail"><p>Company Name</p></dt>
-                                        <dd class="col-sm-4 input"><p>xuz</p></dd>
+                                        <dd class="col-sm-4 input"><p><?php echo $_SESSION['comp1']?></p></dd>
     
                                 </div>
-                                <div class="row">
-                                        <dt class="col-sm-6 detail"><p>From</p></dt>
-                                        <dd class="col-sm-4 input"><p>2000</p></dd>
-    
-                                </div>
-                                <div class="row">
-                                        <dt class="col-sm-6 detail"><p>To</p></dt>
-                                        <dd class="col-sm-4 input"><p>Present</p></dd>
-    
-                                </div>
-                                                    
+                                               
                                                    
                             </div>
                             
