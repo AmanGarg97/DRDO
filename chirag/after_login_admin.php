@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +42,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">  
             <ul class="navbar-nav ml-auto">
                 <div class="logout">
-                    <a href="logout.php" id="logout">Logout</a>
+                    <a href="../logout.php" id="logout">Logout</a>
                 </div>
             </ul>
         </div>
@@ -46,7 +54,7 @@
             <div class="student-count">
                 <div class="content">
                     <h4>No. of Students Registred</h4>
-                    <h5 class="count">1000</h5>
+                    <h5 class="count"><?php echo $_SESSION['id']; ?></h5>
                 </div>
             </div>
         </div>
@@ -58,7 +66,7 @@
         <div class="col-0 col-md-8 add-students">
             <div class="row after_student">
                 <div class="col-md-12">
-                    <a href="signup_form.html" class="add">
+                    <a href="signup_form.php" class="add">
                     <h3>Add Student</h3>
                 </a>
                 </div>

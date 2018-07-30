@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,12 +52,12 @@
                                 <span class=" d-md-inline">Print Form</span></a>
                         </li>
                         <li class="nav-item sidebar-link screen">
-                            <a class="nav-link pl-0 links" href="spec_form.html">
+                            <a class="nav-link pl-0 links" href="spec_form.php">
                                     <i class="fas fa-pen"></i> 
                                 <span class="d-md-inline">Update Specialization</span></a>
                         </li>
                         <li class="nav-item sidebar-link screen">
-                            <a class="nav-link pl-0 links" href="profession_form.html">
+                            <a class="nav-link pl-0 links" href="profession_form.php">
                                     <i class="fas fa-pen"></i>
                                  <span class="d-md-inline">Update Profession</span></a>
                         </li>
@@ -82,17 +89,17 @@
                         </li>
                         
                         <li class="nav-item sidebar-link">
-                            <a class="nav-link pl-0 links" href="#">
+                            <a class="nav-link pl-0 links" href="../review-form.php">
                                     <i class="fas fa-print"></i>                                
                                 <span class="d-none d-md-inline">Print Form</span></a>
                         </li>
                         <li class="nav-item sidebar-link">
-                            <a class="nav-link pl-0 links" href="spec_form.html">
+                            <a class="nav-link pl-0 links" href="spec_form.php">
                                     <i class="fas fa-pen"></i> 
                                 <span class="d-none d-md-inline">Update Specialization</span></a>
                         </li>
                         <li class="nav-item sidebar-link">
-                            <a class="nav-link pl-0 links" href="profession_form.html">
+                            <a class="nav-link pl-0 links" href="profession_form.php">
                                     <i class="fas fa-pen"></i>
                                  <span class="d-none d-md-inline">Update Profession</span></a>
                         </li>
@@ -111,11 +118,11 @@
                 </div>
             </nav>
         </div>
-        <div class="col-12 col-md-10">
+        <div class="col-12 col-md-10 col-sm-10">
             <div class="row">
                 <div class="col-0 col-md-5"></div>
                 <div class="col-0 col-md-4 stud-name">
-                    <h2>Chirag Barka</h2>
+                    <h2><?php echo $_SESSION['username']; ?></h2>
                 </div>
                 <div class="col-0 col-md-3"></div>
             </div>
@@ -125,12 +132,12 @@
                     <h4>Basic information</h4>
                     <div class="card">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><span>Full Name</span><p>Chirag Barka</p></li>
-                            <li class="list-group-item"><span>Enrollment No.</span><p>01620802716</p></li>
-                            <li class="list-group-item"><span>E-mail</span><p>chirag.barka@gmail.com</p></li>
-                            <li class="list-group-item"><span>Gender</span><p>Male</p></li>
-                            <li class="list-group-item"><span>DOB</span><p>06/01/1998</p></li>
-                            <li class="list-group-item"><span>Contact</span><p>9899689562</p></li>
+                            <li class="list-group-item"><span>Full Name</span><p><?php echo $_SESSION['username']  ?></p></li>
+                            <li class="list-group-item"><span>Enrollment No.</span><p><?php echo $_SESSION['enroll_id']; ?></p></li>
+                            <li class="list-group-item"><span>E-mail</span><p><?php echo $_SESSION['email']; ?></p></li>
+                            <li class="list-group-item"><span>Gender</span><p><?php echo $_SESSION['gen']; ?></p></li>
+                            <li class="list-group-item"><span>DOB</span><p><?php echo $_SESSION['b_day']; ?></p></li>
+                            <li class="list-group-item"><span>Contact</span><p><?php echo $_SESSION['phone']; ?></p></li>
                         </ul>
                     </div>
                 </div>
@@ -138,9 +145,9 @@
                     <h4 class="academic">Academic Details</h4>
                     <div class="card">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><span>Branch</span><p>CSE-A</p></li>
+                            <li class="list-group-item"><span>Branch</span><p><?php echo $_SESSION['branch']; ?></p></li>
                             <li class="list-group-item"><span>Batch</span><p>2016-2020</p></li>
-                            <li class="list-group-item"><span>Specification</span><p>Web Developer</p></li>
+                            <li class="list-group-item"><span>Specification</span><p><?php echo $_SESSION['spec']; ?></p></li>
                         </ul>
                     </div>     
                 </div>

@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,9 +34,9 @@
     </nav>
 
     <div class="container formbox1">
-        <h2 id="spec-heading">ADD SPECIFICATION</h2>
+        <h2 id="spec-heading"><?php echo $_SESSION['username']; ?></h2>
 
-        <form action="" method="">
+        <form action="spec_backend.php" method="post">
             <div class="spec-form">
                 <textarea name="spec" id="spec" cols="50" rows="5"></textarea>
             </div>

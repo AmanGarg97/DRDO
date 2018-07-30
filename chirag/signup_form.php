@@ -69,7 +69,7 @@ include 'common.php';
 
         <h2 id="personal-heading">PERSONAL DETAILS</h2><br>
         
-        <form action="" method="post" class="form" role="form" enctype="multipart/form-data">
+        <form action="test.php" method="post"  class="form" role="form" enctype="multipart/form-data">
 
             <div class="personal-form">
 
@@ -104,6 +104,10 @@ include 'common.php';
                 <div>
                     <label for="dob" id="birth-date">Birth Date</label>
                     <input type="date" class="form-control" id="dob" placeholder="DOB" name="bdate">
+<!--             <input type="date" data-date="" data-date-format="yyyy-mm-dd">-->
+
+               
+
                 </div>
                 <br>
 
@@ -172,16 +176,14 @@ include 'common.php';
             </div>
 -->
             <label for="telephone" id="tel-no">Tel-No</label><br>
-            <input id="telephone" type="tel" class="form-control" name="telno" 
-            pattern="[0-6]{3}-[0-9]{8}" placeholder="011-25252525" maxlength="12">
+            <input id="telephone" type="tel" class="form-control" name="telno">
             <br>
 
             <!-- phone no and email address -->
             <div class="row">
                 <div class="col">
                     <label for="phn-no" id="phone">Phone No.</label><br>
-                    <input id="phn-no" type="tel" class="form-control" name="phone" 
-                    pattern="[0-9]{10}" maxlength="10">
+                    <input id="phn-no" type="tel" class="form-control" name="phone">
                 </div>
     
                 <div class="col">
@@ -231,7 +233,7 @@ include 'common.php';
         <div class="row">
             <div class="col-0 col-md-5"></div>
             <div class="col-0 col-md-2">
-                <button type="submit" class="btn" id="btn" onclick="window.open('index.php')">Submit</button>
+                <button type="submit" class="btn" id="btn" name="submit">Submit</button>
             </div>
             <div class="col-0 col-md-5"></div>
         </div>
@@ -240,12 +242,7 @@ include 'common.php';
          
     <!-- DIV 2 ENDS -->
 
-    <!-- DIV 4 STARTS -->
-
-    <br>
-
-<br><br>    
-    <!-- DIV 4 ENDS -->
+  
     </form>
   
 

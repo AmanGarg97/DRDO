@@ -57,7 +57,7 @@ include 'common.php';
 
         <h2 id="personal-heading">PERSONAL DETAILS</h2><br>
         
-        <form action="" method="post" class="form" role="form" enctype="multipart/form-data">
+        <form action="enter.php" method="post" class="form" role="form" enctype="multipart/form-data">
 
             <div class="personal-form">
 
@@ -92,41 +92,7 @@ include 'common.php';
                       <input type="submit" name="submit" value="upload" />
                       
                     </div>
-                    <?php
-                  if(isset($_POST['submit'])){
-                    
-                    if(getimagesize($_FILES['image']['tmp_name']) == FALSE){
-                      echo "Please select an image";
-                    }
-                  
-                  else{
-                                  
-
-                    $image=addslashes($_FILES['image']['tmp_name']);
-                    $name=addslashes($_FILES['image']['name']);
-                    $image=file_get_contents($image);
-                    $image=base64_encode($image);
-                  }
-                  }
-                  
-                  function saveimage()
-                  {
-                    echo "aman";
-                    $con = mysqli_connect("localhost" , "root" , "" ,"personal_details") or die(mysqli_error($con));
-
-                    $qry="insert into students(name,image) values('$name','$image') where enroll_id=12345";
-                    $result = mysqli_query($con,$qry);
-                    
-                    if($result){
-                      echo "Image uploaded";
-                      
-                    }
-                    else{
-                      echo "Image is not uploaded";
-                    }
-                  }
-                  
-                  ?>
+                   
                  </div>
                 <br>
 
@@ -367,7 +333,7 @@ include 'common.php';
             <br>
 
             <button type="submit" class="btn" id="btn" 
-            onclick="window.open('index.html')">Submit</button>
+            onclick="window.open('enter.php')">Submit</button>
 
         </div>
     </div>

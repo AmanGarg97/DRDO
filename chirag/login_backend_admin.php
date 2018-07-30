@@ -27,6 +27,8 @@ $add = $row['address'];
 $tel = $row['telephone'];
 $phone = $row['phone'];
 $date = $row['Reg_Time'];
+$id = $row['id'];
+$email = $row['email_id'];
 
 $select = "SELECT * FROM academic_details where enroll_id = '$enroll'";
 $result2 = mysqli_query($con,$select) or die(mysqli_error($con));
@@ -37,6 +39,11 @@ $passyear = $r['pass_year'];
 $branch = $r['Branch'];
 $spec = $r['spec'];
 $comp = $r['company1'];
+
+$result3 = mysqli_query($con,"select count(1) FROM students");
+$ro = mysqli_fetch_array($result3);
+
+$total = $ro[0];
 
 
 if($total_rows_fetched == 0)
@@ -66,7 +73,9 @@ else
   $_SESSION['branch'] = $branch;
   $_SESSION['comp1'] = $comp;
   $_SESSION['date'] = $date;
-header('location: login_submit.php');
+  $_SESSION['id'] = $total;
+  $_SESSION['email'] = $email;
+header('location: after_login_admin.php');
 }
 
 

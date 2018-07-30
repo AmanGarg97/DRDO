@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +36,7 @@
     <div class="container formbox2">
         <h2 id="spec-heading">ADD PROFESSION</h2>
         <br>
-        <form action="" method="">
+        <form action="profession_backend.php" method="post">
             
             <div class="personal-form">
 
