@@ -36,7 +36,7 @@ include 'common.php';
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a href="after_login_admin.html" id="home" class="nav-link">Home</a>
+                        <a href="after_login_admin.php" id="home" class="nav-link">Home</a>
                     </li>
                 </ul>  
                 <ul class="navbar-nav ml-auto">

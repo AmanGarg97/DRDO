@@ -27,14 +27,14 @@ session_start();
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="stud_profile.html" id="profile" class="nav-link">Profile</a>
+                    <a href="stud_profile.php" id="profile" class="nav-link">Profile</a>
                 </li>
             </ul>  
         </div>
     </nav>
 
     <div class="container formbox1">
-        <h2 id="spec-heading"><?php echo $_SESSION['username']; ?></h2>
+        <h2 id="spec-heading">SPECIALIZATION</h2>
 
         <form action="spec_backend.php" method="post">
             <div class="spec-form">

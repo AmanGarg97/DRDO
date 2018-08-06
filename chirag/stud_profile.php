@@ -89,7 +89,7 @@ session_start();
                         </li>
                         
                         <li class="nav-item sidebar-link">
-                            <a class="nav-link pl-0 links" href="../review-form.php">
+                            <a class="nav-link pl-0 links" href="review-form.php">
                                     <i class="fas fa-print"></i>                                
                                 <span class="d-none d-md-inline">Print Form</span></a>
                         </li>

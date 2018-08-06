@@ -27,7 +27,7 @@ session_start();
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="stud_profile.html" id="profile" class="nav-link">Profile</a>
+                    <a href="stud_profile.php" id="profile" class="nav-link">Profile</a>
                 </li>
             </ul>  
         </div>

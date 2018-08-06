@@ -267,6 +267,39 @@ nav{
     width: 89%;
 }
 
+.enroll-div{
+    margin-top: 12%;
+}
+
+.enroll-box{
+    border: 1px solid rgb(221, 214, 214);
+    box-shadow: 1px 1px 4px 1px rgb(206, 198, 198);
+    height: 180px; 
+}
+
+.enroll-box h4{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.enroll-box input{
+    margin-top: 6%;
+    width: 80%;
+    margin-left: 10%;
+    border: 1px solid black;
+}
+
+.enroll-box button{
+    margin-top: 6%;
+    margin-left: 38%;
+    background-color: black;
+    color: white;
+}
+
+#home{
+    color: white;
+    font-size: 120%;
+}
 
 @media (max-width: 500px){
 
