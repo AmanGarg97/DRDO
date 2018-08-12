@@ -1,23 +1,26 @@
 .navbar{
 
-    background-color: #222020;
+    background-color: steelblue;;
 
 }
 
 /* new editing */
 
 .bpit-nav{
-    color: rgb(41, 41, 212);
-    font-size: 130%;
+    color: rgb(77, 6, 6);
+    text-shadow: rgb(80, 6, 6) 1px 1px;
+    font-size: 140%;
+    font-family: serif;
 }
 
 .search-nav{
-    color: rgb(197, 28, 28);
-    font-size: 130%;
+    color: rgb(9, 4, 59);
+    text-shadow: rgb(15, 10, 90) 1px 1px;
+    font-size: 140%;
+    font-family: serif;
 }
-
 #menu-div{
-    color: white;
+    color: black;
     font-size: 120%;
 }
 
@@ -27,14 +30,14 @@
 
 #logout{
     color: white;
-    background-color:#222020;
+    background-color:steelblue;
     font-size: 120%; 
     font-family: 'Montserrat', sans-serif;
 
 }
 
 #logout:hover{
-    background-color: #222020;
+    background-color: steelblue;
     text-decoration: none;
 }
 
@@ -45,14 +48,13 @@
 }
 
 #details-body{
-    background-image: url("Dark-Grey-Background.jpg");
+    background-color: rgb(231, 228, 241);
 }
 
 .formbox1{
-    background-image: url("white-back.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: white;
+    border: 1px solid rgb(221, 214, 214);
+    box-shadow: 1px 1px 4px 1px rgb(165, 163, 163);
     width: 55%;
     height: 1050px;
     margin-top: 1.5%;
@@ -209,10 +211,9 @@
 }
 
 .formbox2{
-    background-image: url("white-back.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: white;
+    border: 1px solid rgb(221, 214, 214);
+    box-shadow: 1px 1px 4px 1px rgb(165, 163, 163);
     width: 55%;
     height: 500px;
     margin-top: 1.5%;

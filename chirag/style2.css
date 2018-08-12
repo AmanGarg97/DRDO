@@ -42,7 +42,7 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: rgb(44, 46, 44);
+    background-color: steelblue;
 }
 
 
@@ -58,23 +58,28 @@
 
 .username{
     color: white;
-    background-color: black;
+    background-color: steelblue;
 }
 
 #login:hover{
-    background-color: black;
+    background-color: steelblue;
 }
 
 .bpithead{
-    color: rgb(41, 41, 212);
-    font-size: 130%;
+    color: rgb(77, 6, 6);
+    text-shadow: rgb(80, 6, 6) 1px 1px;
+    font-size: 140%;
+    font-family: serif;
 }
+
 .searchhead{
-    color: rgb(197, 28, 28);
-    font-size: 130%;
+    color: rgb(9, 4, 59);
+    text-shadow: rgb(15, 10, 90) 1px 1px;
+    font-size: 140%;
+    font-family: serif;
 }
 .review{
-    background-color: black;
+    background-color: steelblue;
 }
 
 #profile{

@@ -1,21 +1,10 @@
 .navbar{
 
-    background-color: #222020;
+    background-color: steelblue;
 
 }
-
-nav{
-    position: sticky;
-}
-
-.bpit-nav{
-    color: rgb(41, 41, 212);
-    font-size: 130%;
-}
-
-.search-nav{
-    color: rgb(197, 28, 28);
-    font-size: 130%;
+body{
+    background-color: rgb(231, 228, 241);
 }
 
 .navbar-toggler-icon{
@@ -24,26 +13,45 @@ nav{
     padding-top: 5px;
 }
 
+.bpit-nav{
+    color: rgb(77, 6, 6);
+    text-shadow: rgb(80, 6, 6) 1px 1px;
+    font-size: 140%;
+    font-family: serif;
+}
+
+.search-nav{
+    color: rgb(9, 4, 59);
+    text-shadow: rgb(15, 10, 90) 1px 1px;
+    font-size: 140%;
+    font-family: serif;
+}
+
 #logout{
     color: white;
-    background-color:#222020;
+    background-color: steelblue;
     font-size: 120%; 
     font-family: 'Montserrat', sans-serif;
 
 }
 
 #logout:hover{
-    background-color: #222020;
+    background-color: steelblue;
     text-decoration: none;
 }
 
 .bpithead{
-    color: rgb(41, 41, 212);
-    font-size: 130%;
+    color: rgb(77, 6, 6);
+    text-shadow: rgb(80, 6, 6) 1px 1px;
+    font-size: 140%;
+    font-family: serif;
 }
+
 .searchhead{
-    color: rgb(197, 28, 28);
-    font-size: 130%;
+    color: rgb(9, 4, 59);
+    text-shadow: rgb(15, 10, 90) 1px 1px;
+    font-size: 140%;
+    font-family: serif;
 }
 
 .username{
@@ -56,8 +64,9 @@ nav{
     display: block;
     border-radius: 4px;
     height: 10rem;
+    background-color: white;
     border: 1px solid rgb(221, 214, 214);
-    box-shadow: 1px 1px 4px 1px rgb(233, 227, 227);
+    box-shadow: 1px 1px 4px 1px rgb(165, 163, 163);
 }
 
 .after_student{
@@ -84,10 +93,11 @@ nav{
 
 .add-students{
     border: 1px solid rgb(221, 214, 214);
-    box-shadow: 1px 1px 4px 1px rgb(233, 227, 227);
+    box-shadow: 1px 1px 4px 1px rgb(165, 163, 163);
     border-radius: 3px;
     padding-top: 0px;
     padding-bottom: 15px;
+    background-color: white;
 }
 
 .add-students a h3{
@@ -169,17 +179,16 @@ nav{
 }
 
 #details-body{
-    background-image: url("Dark-Grey-Background.jpg");
+    background-color: rgb(231, 228, 241);
 }
 
 .formbox1{
-    background-image: url("white-back.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 60%;
-    height: 500px;
-    margin-top: 1.5%;
+    background-color: white;
+    border: 1px solid rgb(221, 214, 214);
+    box-shadow: 1px 1px 4px 1px rgb(165, 163, 163);
+    width: 50%;
+    height: 400px;
+    margin-top: 3%;
     border-radius: 10px;
 }
 
@@ -190,7 +199,7 @@ nav{
 }
 
 .spec-form{
-    margin-left: 26%;
+    margin-left: 20%;
     margin-top: 6%;
 }
 
@@ -205,12 +214,14 @@ nav{
 }
 
 .formbox2{
-    background-image: url("white-back.jpg");
+    background-color: white;
+    border: 1px solid rgb(221, 214, 214);
+    box-shadow: 1px 1px 4px 1px rgb(165, 163, 163);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 70%;
-    height: 600px;
+    height: 530px;
     margin-top: 1.5%;
     border-radius: 10px;
 }
@@ -273,8 +284,10 @@ nav{
 
 .enroll-box{
     border: 1px solid rgb(221, 214, 214);
-    box-shadow: 1px 1px 4px 1px rgb(206, 198, 198);
-    height: 180px; 
+    box-shadow: 1px 1px 4px 1px rgb(165, 163, 163);
+    border-radius: 3px;
+    height: 180px;
+    background-color: white; 
 }
 
 .enroll-box h4{
