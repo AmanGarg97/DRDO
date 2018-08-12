@@ -130,3 +130,43 @@ input{
     margin-top: -1.3%;
 }
 
+.not-found{
+    border-top: 2px solid rgb(16, 16, 124);
+    border-bottom: 2px solid rgb(16, 16, 124);
+    margin-top: 11%;
+    height: 130px;
+    box-shadow: 1px 1px 7px 1px gray;
+}
+
+.not-found h2{
+    color: rgb(9, 9, 104);
+    margin-top: 5%;
+    text-align: center;
+}
+
+#error-body{
+    background-color: rgba(24, 24, 168, 0.651);
+}
+
+.error{
+    margin-top: 7%;
+}
+
+.error h1{
+    color: white;
+    font-size: 440%;
+    text-shadow: 1px 1px white;
+}
+
+.error h3{
+    color: white;
+    font-size: 200%;
+    margin-top: 6%;
+
+}
+
+.error h6{
+    color: white;
+    font-size: 120%;
+    margin-top: 5%;
+}
