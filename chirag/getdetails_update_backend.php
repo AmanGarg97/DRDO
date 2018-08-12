@@ -1,8 +1,15 @@
-<!--<?php
+<?php
 include 'common.php';
 ?>
--->
 
+<?php
+session_start();
+
+
+
+
+
+?>
 
 
 <!DOCTYPE html>
@@ -14,12 +21,18 @@ include 'common.php';
     
     <link rel="stylesheet" href="style.css">
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
     crossorigin="anonymous"></script>
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" 
     integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
@@ -30,6 +43,19 @@ include 'common.php';
 </head>
 <body id="details-body">
 
+   
+  
+
+
+
+
+
+    
+
+   
+   
+   
+   
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand sticky-top" id="nav" href="index.html">
            <span class="bpit-nav">BPIT </span><span class="search-nav">Search</span>        
@@ -68,15 +94,20 @@ include 'common.php';
     
     <br>
     <!-- DIV 1 STARTS -->
+     <form action="update_backend.php" method="post" enctype="multipart/form-data">
 
-   <form action="update_backend.php" method="post" class="form" role="form" enctype="multipart/form-data">
-   
+    
+
     <div class="container formbox1" id="Menu1">
+        
+          
+
 
         <h2 id="personal-heading">PERSONAL DETAILS</h2><br>
         
         
 
+         
             <div class="personal-form">
 
                 <!-- Enrollment no and profile picture -->
@@ -85,7 +116,7 @@ include 'common.php';
                         <label for="Eno" id="enroll-numb">Enrollment Number</label><br>
                         <div class="row">
                             <div class="col">
-                                <input id="Eno" type="number" class="form-control" name="enroll">
+                                <input id="Eno" type="number" class="form-control" name="enroll" value="<?php echo $_SESSION['enroll_id']?>" readonly>
                             </div>
                         </div>
                     </div>
@@ -96,12 +127,12 @@ include 'common.php';
                 <label for="name-input" id="name">Name</label>
                 <div class="row">
                     <div class="col">
-                        <input id="name-input-first" type="text" class="form-control" placeholder="First name"
-                        name="firstname">
+                        <input id="name-input-first" type="text" class="form-control" name="firstname" value="<?php echo $_SESSION['first_name'] ?>">
                     </div>
+                    
                     <div class="col">
                         <input id="name-input-last" type="text" class="form-control" placeholder="Last name" 
-                        name="lastname">
+                        name="lastname" value="<?php echo $_SESSION['last_name'] ?>">
                     </div>
                 </div>
                 <br>
@@ -109,21 +140,26 @@ include 'common.php';
                 <!-- birth date -->
                 <div>
                     <label for="dob" id="birth-date">Birth Date</label>
-                    <input type="date" class="form-control" id="dob" placeholder="DOB" name="bdate">
+                    <input type="date" class="form-control" id="dob" value="<?php echo $_SESSION['b_day'] ?>" name="bdate">
                 </div>
                 <br>
 
+                         <?php
+    $gender = $_SESSION['gen'] 
+?>
+               
+               
                 <!-- gender -->
                 <label for="defaultCheck1" id="gender">Gender</label>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" value="" id="defaultCheck1" name="gen">
+                    <input class="form-check-input" type="radio" value="" id="defaultCheck1" name="gen" <?php if($gender == "male"){echo("checked");}?>>
                     <label class="form-check-label" for="defaultCheck1" id="gend">
                         Male
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" value="" id="defaultCheck1" name="gen">
-                    <label class="form-check-label" for="defaultCheck1" id="gend">
+                    <input class="form-check-input" type="radio" value="" id="defaultCheck1" name="gen" <?php if($gender == "female"){echo("checked");}?>>
+                    <label class="form-check-label" for="defaultCheck1" id="gend" >
                         Female
                     </label>
                 </div><br>
@@ -134,7 +170,7 @@ include 'common.php';
                     <label for="fa-name" id="father">Father's name</label><br>
                     <div class="row">
                         <div class="col">
-                            <input id="fa-name" type="text" class="form-control" placeholder="Name" name="fname">
+                            <input id="fa-name" type="text" class="form-control" value="<?php echo $_SESSION['fname'] ?>" name="fname">
                         </div>
                     </div>
                     </div>
@@ -142,7 +178,7 @@ include 'common.php';
                     <label for="ma-name" id="mother">Mother's name</label><br>
                     <div class="row">
                         <div class="col">
-                            <input id="ma-name" type="text" class="form-control" placeholder="Name" name="mname">
+                            <input id="ma-name" type="text" class="form-control" value="<?php echo $_SESSION['mname'] ?>" name="mname">
                         </div>
                     </div>
                     </div>
@@ -150,7 +186,7 @@ include 'common.php';
 
                 <!-- Address -->
                 <label for="add1" id="add">Address1</label><br>
-                <input id="add1" type="text" class="form-control" placeholder="Line 1" name="add">
+                <input id="add1" type="text" class="form-control" value="<?php echo $_SESSION['add'] ?>" name="add">
                 <br>
         
         <!-- Right now don't need this -->
@@ -164,11 +200,11 @@ include 'common.php';
             <div class="row">
                 <div class="col">
                     <label for="state1" id="state">State</label><br>
-                    <input id="state1" type="text" class="form-control" name="city">
+                    <input id="state1" type="text" class="form-control" value="<?php echo $_SESSION['state'] ?>" name="city">
                 </div>
                 <div class="col">
                     <label for="pincode" id="pin-code">Pin Code</label><br>
-                    <input id="pincode" type="number" class="form-control" name="pin">
+                    <input id="pincode" type="number" class="form-control" name="pin" value="<?php echo $_SESSION['pincode'] ?>" >
                 </div>
             </div><br>
 <!--
@@ -179,7 +215,7 @@ include 'common.php';
 -->
             <label for="telephone" id="tel-no">Tel-No</label><br>
             <input id="telephone" type="tel" class="form-control" name="telno" 
-            pattern="[0-6]{3}-[0-9]{8}" placeholder="011-25252525" maxlength="12">
+            pattern="[0-6]{3}-[0-9]{8}" value="<?php echo $_SESSION['tel'] ?>" maxlength="12">
             <br>
 
             <!-- phone no and email address -->
@@ -187,12 +223,12 @@ include 'common.php';
                 <div class="col">
                     <label for="phn-no" id="phone">Phone No.</label><br>
                     <input id="phn-no" type="tel" class="form-control" name="phone" 
-                    pattern="[0-9]{10}" maxlength="10">
+                    pattern="[0-9]{10}" value="<?php echo $_SESSION['phone'] ?>" maxlength="10">
                 </div>
     
                 <div class="col">
                     <label for="email" id="e-mail">E-Mail</label><br>
-                    <input id="email" type="email" class="form-control" name="youremail">
+                    <input id="email" type="email" class="form-control" name="youremail" value="<?php echo $_SESSION['email'] ?>">
                 </div>
             </div>
         </div>        
@@ -213,34 +249,44 @@ include 'common.php';
             <div class="row">
                 <div class="col">
                     <label for="adm" id="year">Year of Admission</label>
-                    <input type="number" class="form-control" id="adm" name="adm">
+                    <input type="number" class="form-control" id="adm" name="adm" value="<?php echo $_SESSION['admyear'] ?>">
                 </div>
                 <div class="col">
                     <label for="pass" id="year">Year of Passing Out</label>
-                    <input type="number" class="form-control" id="pass" name="pass">
+                    <input type="number" class="form-control" id="pass" name="pass" value="<?php echo $_SESSION['passyear'] ?>">
                 </div>
             </div><br>
 
             <!-- branch -->
             <label for="inputState" id="branch">Branch</label>
-            <select id="inputState" class="form-control" name="branch">
-                <option selected>Choose...</option>
-                <option>CSE-A</option>
-                <option>CSE-B</option>
-                <option>ECE-A</option>
-                <option>ECE-B</option>
-                <option>IT</option>
-                <option>EEE</option>
+            
+            <?php
+    $selected = $_SESSION['branch'] 
+?>
+
+            
+            
+            <select id="inputState" class="form-control" name="branch" >
+                <option >Choose...</option>
+                <option <?php if($selected == "CSE-A"){echo("selected");}?>>CSE-A</option>
+                <option <?php if($selected == "CSE-B"){echo("selected");}?>>CSE-B</option>
+                <option <?php if($selected == "ECE-A"){echo("selected");}?>>ECE-A</option>
+                <option <?php if($selected == "ECE-B"){echo("selected");}?>>ECE-B</option>
+                <option <?php if($selected == "IT"){echo("selected");}?>>IT</option>
+                <option <?php if($selected == "EEE"){echo("selected");}?>>EEE</option>
+                
+                
             </select><br>
 
             <!-- subjects and faculty details sem wise -->
 
             <!-- specialization -->
             <label for="spec" id="specs">Specialization</label><br>
-            <textarea rows="2" cols="40" id="spec" name="spec"></textarea>
+            <textarea rows="2" cols="40" id="spec" name="spec"><?php echo $_SESSION['spec'] ?></textarea>
             <br><br>
 
         </div>
+       
 
     </div>
          
@@ -250,16 +296,19 @@ include 'common.php';
    
     <div class="container toAdd formbox3" id="Menu3" style="display:none;">
 
+               
+       
+       
         <h2 id="profession-heading">PROFESSSION</h2><br>
 
         <div class="personal-form">
 
-        <!-- currently working -->
+          
         <label id="current-heading">Currently Working</label><br>
         <div class="row">
             <div class="col">
                 <label for="comp" id="compname">Company Name</label>
-                <input type="text" class="form-control" id="comp" name="comp1">
+                <input type="text" class="form-control" id="comp" name="comp1"  value="<?php echo $_SESSION['comp1'] ?>">
             </div>
             <div class="col">
                 <label for="pos" id="position">Position</label>
@@ -267,7 +316,7 @@ include 'common.php';
             </div>
             <div class="col">
                 <label for="date" id="from">From</label>
-                <input type="date" class="form-control" id="date">
+                <input type="date" class="form-control" id="date" >
             </div>
         </div><br>
 
@@ -276,25 +325,25 @@ include 'common.php';
         <div class="row">
             <div class="col">
                 <label for="prev" id="compname">Company Name</label>
-                <input type="text" class="form-control" id="prev" name="comp2">
+                <input type="text" class="form-control" id="prev" name="comp2" value="<?php echo $_SESSION['comp2'] ?>">
             </div>
             <div class="col">
                 <label for="pos" id="position">Position</label>
-                <input type="text" class="form-control" id="pos">
+                <input type="text" class="form-control" id="pos" >
             </div>
             <div class="col">
                 <label for="dte" id="from">From</label>
-                <input type="date" class="form-control" id="dte">
+                <input type="date" class="form-control" id="dte" >
             </div>
             <div class="col">
                 <label for="dt" id="to">To</label>
-                <input type="date" class="form-control" id="dt">
+                <input type="date" class="form-control" id="dt" >
             </div>
         </div><br>
 
         <div class="row">
                 <div class="col">
-                    <input type="text" class="form-control" id="prev" name="comp3">
+                    <input type="text" class="form-control" id="prev" name="comp3" value="<?php echo $_SESSION['comp3'] ?>">
                 </div>
                 <div class="col">                        
                     <input type="text" class="form-control" id="pos">
@@ -307,30 +356,29 @@ include 'common.php';
                 </div>
         </div>
         <br><br><br>
+        </div>
         <div class="row">
                 <div class="col-0 col-md-5"></div>
                 <div class="col-0 col-md-2">
-                    <button name="update" type="submit" class="btn" id="btn">Update</button>
+                    <input type="submit" class="btn" id="btn" name = "update" value="Update">
                 </div>
                 <div class="col-0 col-md-5"></div>
         </div>
 
-        </div>
+        
 
-   
-   
-   
+
     </div>
+       </form>
 
     <!-- DIV 3 ENDS -->
 
-    </form>
+
 
     <br>
 
 <br><br>    
 
-    
   
 
 <script>
