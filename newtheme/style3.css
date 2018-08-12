@@ -1,0 +1,379 @@
+.navbar{
+
+    background-color: steelblue;
+
+}
+body{
+    background-color: rgb(231, 228, 241);
+}
+
+.navbar-toggler-icon{
+    color: white;
+    font-size: 120%;
+    padding-top: 5px;
+}
+
+.bpit-nav{
+    color: rgb(77, 6, 6);
+    text-shadow: rgb(80, 6, 6) 1px 1px;
+    font-size: 140%;
+    font-family: serif;
+}
+
+.search-nav{
+    color: rgb(9, 4, 59);
+    text-shadow: rgb(15, 10, 90) 1px 1px;
+    font-size: 140%;
+    font-family: serif;
+}
+
+#logout{
+    color: white;
+    background-color: steelblue;
+    font-size: 120%; 
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#logout:hover{
+    background-color: steelblue;
+    text-decoration: none;
+}
+
+.bpithead{
+    color: rgb(77, 6, 6);
+    text-shadow: rgb(80, 6, 6) 1px 1px;
+    font-size: 140%;
+    font-family: serif;
+}
+
+.searchhead{
+    color: rgb(9, 4, 59);
+    text-shadow: rgb(15, 10, 90) 1px 1px;
+    font-size: 140%;
+    font-family: serif;
+}
+
+.username{
+    color: white;
+    background-color:#222020;
+}
+
+.student-count{
+    position: relative;
+    display: block;
+    border-radius: 4px;
+    height: 10rem;
+    background-color: white;
+    border: 1px solid rgb(221, 214, 214);
+    box-shadow: 1px 1px 4px 1px rgb(165, 163, 163);
+}
+
+.after_student{
+    margin-top: 2%;
+}
+
+.content{
+    padding: 10px;
+}
+
+.content h4{
+    font-size: 180%;
+    text-align: center;
+    font-family: 'Slabo 27px', serif;
+}
+
+.content h5{
+    margin-top: 3%;
+    text-align: center;
+    font-weight: 100;
+    font-size: 350%;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.add-students{
+    border: 1px solid rgb(221, 214, 214);
+    box-shadow: 1px 1px 4px 1px rgb(165, 163, 163);
+    border-radius: 3px;
+    padding-top: 0px;
+    padding-bottom: 15px;
+    background-color: white;
+}
+
+.add-students a h3{
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.add:hover{
+    text-decoration: none;
+}
+
+.update:hover{
+    text-decoration: none;
+}
+
+.screen{
+    display: none;
+}
+
+.profile-header{
+    text-align: center;
+    font-size: 150%;
+    padding-top: 10px;
+}
+
+.sidebar{
+    height: 597px;
+}
+
+.sidebar-link{
+    margin-top: 5%;
+}
+
+.links{
+    font-size: 120%;
+    padding: 8px;
+}
+
+.stud-name{
+    margin-top: 1%;
+    
+}
+
+.stud-name h2{
+    font-family: 'PT Serif', serif;
+    font-size: 200%;
+}
+
+.information{
+    margin-top: 3%;
+}
+
+.information h4{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.list-group-item{
+    padding-bottom: 0px;
+}
+
+.card{
+    margin-top: 4%;
+    width: 21rem;
+    box-shadow: 1px 1px 4px 1px rgb(228, 220, 220);
+}
+
+.list-group p{
+    float: right;
+}
+
+.list-group span{
+    font-weight: bold;
+}
+
+#profile{
+    color: white;
+    font-size: 120%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#details-body{
+    background-color: rgb(231, 228, 241);
+}
+
+.formbox1{
+    background-color: white;
+    border: 1px solid rgb(221, 214, 214);
+    box-shadow: 1px 1px 4px 1px rgb(165, 163, 163);
+    width: 50%;
+    height: 400px;
+    margin-top: 3%;
+    border-radius: 10px;
+}
+
+#spec-heading{
+    text-align: center;
+    padding-top: 2%;
+    font-family: Impact, fantasy;
+}
+
+.spec-form{
+    margin-left: 20%;
+    margin-top: 6%;
+}
+
+#spec{
+    border: 1px solid black;
+}
+
+#btn{
+    font-size: 120%;
+    background-color: black;
+    color: white;
+}
+
+.formbox2{
+    background-color: white;
+    border: 1px solid rgb(221, 214, 214);
+    box-shadow: 1px 1px 4px 1px rgb(165, 163, 163);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70%;
+    height: 530px;
+    margin-top: 1.5%;
+    border-radius: 10px;
+}
+
+#current-heading{
+    font-size: 140%;
+    font-weight: bold;
+}
+
+#compname{
+    font-size: 115%;
+    font-weight: bold;
+}
+
+#comp{
+    border: 1px solid black;
+}
+
+#position{
+    font-size: 115%;
+    font-weight: bold;
+}
+
+#pos{
+    border: 1px solid black;
+}
+
+#from{
+    font-size: 115%;
+    font-weight: bold;
+}
+
+#date{
+    border: 1px solid black;
+    width: 89%;
+}
+
+#to{
+    font-size: 115%;
+    font-weight: bold;
+}
+
+#prev{
+    border: 1px solid black;
+}
+
+#dte{
+    border: 1px solid black;
+    width: 89%;
+}
+
+#dt{
+    border: 1px solid black;
+    width: 89%;
+}
+
+.enroll-div{
+    margin-top: 12%;
+}
+
+.enroll-box{
+    border: 1px solid rgb(221, 214, 214);
+    box-shadow: 1px 1px 4px 1px rgb(165, 163, 163);
+    border-radius: 3px;
+    height: 180px;
+    background-color: white; 
+}
+
+.enroll-box h4{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.enroll-box input{
+    margin-top: 6%;
+    width: 80%;
+    margin-left: 10%;
+    border: 1px solid black;
+}
+
+.enroll-box button{
+    margin-top: 6%;
+    margin-left: 38%;
+    background-color: black;
+    color: white;
+}
+
+#home{
+    color: white;
+    font-size: 120%;
+}
+
+@media (max-width: 500px){
+
+    .student-count{
+        margin-left: 6%;
+        width: 17rem;
+        height: 11rem;
+        margin-top: 4%;
+    }
+
+    .add-students{
+        margin-top: 2%;
+        padding-top: 10px;
+        width: 17rem;
+        margin-left: 10%;
+    }
+
+    .sidebar{
+        display: none;
+    }
+    .profile-header{
+        display: none;
+    }
+
+    .sidebar-link{
+        margin-top: 0%;
+    }
+    
+    .links{
+        font-size: 100%;
+    }
+
+    .links:hover{
+        color: rgb(238, 236, 236);
+    }
+
+    .screen{
+        display: block;
+    }
+
+    .links{
+        color: rgb(170, 167, 167);
+    }
+
+    .stud-name{
+        text-align: center;
+    }
+
+    .card{
+        width: 15rem;
+        margin-top: 6%;
+    }
+
+    .information h4{
+        margin-top: 4%;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .academic{
+        padding-top: 20px;
+    }
+}
+
