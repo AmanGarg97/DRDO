@@ -29,15 +29,13 @@
              
              if($firstname!=$row['first_name']){
                  
-                 echo ("Invalid name");
+                 header('Location: invalid-name.html');
                  $flag = 2;
                  
              }
              else  if($row['password']!=null){
                  
-                echo ("Bhosdike tu already registered h");
-                 echo "<a href=login_stud.html>Login</a>";
-                 
+                header('Location: registered.html');
                  $flag = 2;
                  
                  
@@ -53,8 +51,7 @@
 
 
      if($pass!=$cnf_pass){
-              echo ("Passwords do not match");
-              echo "<a href=index.html>Back</a>";
+              header('Location: pass-notmatch.html');
                             
 
               $flag = 2;
@@ -69,18 +66,14 @@ die($insert);
           
           $submit = mysqli_query($con,$insert) or die(mysqli_error($con));
           
-          echo ("Registered successfully");
-          echo ("Please login to continue");
-          echo "<a href=login_stud.html>Login</a>";
+          header('Location: success.html');
           
           
           
           
       }
     else if($flag==1) {
-             echo ("Student is not registered by the admin Contact admin for more details");
-        echo "<a href=index.html>Back</a>";
-             echo $flag;
+             header('Location: not-registered.html');
          }
          
          

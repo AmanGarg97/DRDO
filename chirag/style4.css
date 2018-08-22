@@ -120,6 +120,7 @@ input{
     border-radius: 10px;
     box-shadow: 1px 1px 6px 1px gray;
     background-color: rgb(245, 245, 245);
+    flex-shrink: 0;
 }
 
 .show-result h2{
@@ -169,4 +170,40 @@ input{
     color: white;
     font-size: 120%;
     margin-top: 5%;
+}
+
+.success{
+    border-top: 2px solid rgb(16, 16, 124);
+    border-bottom: 2px solid rgb(16, 16, 124);
+    margin-top: 11%;
+    height: 160px;
+    box-shadow: 1px 1px 7px 1px gray;
+}
+
+.success h2 {
+    color: rgb(9, 9, 104);
+    margin-top: 5%;
+    text-align: center;
+}
+
+
+#succ-login-btn{
+    color: white;
+    background-color: black;
+    margin-left: 43%;
+    margin-top: 2%;
+}
+
+.not-reg{
+    border-top: 2px solid rgb(16, 16, 124);
+    border-bottom: 2px solid rgb(16, 16, 124);
+    margin-top: 11%;
+    height: 190px;
+    box-shadow: 1px 1px 7px 1px gray;
+}
+
+.not-reg h2 {
+    color: rgb(9, 9, 104);
+    margin-top: 5%;
+    text-align: center;
 }

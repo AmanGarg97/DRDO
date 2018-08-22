@@ -1,3 +1,13 @@
+.sspl{
+    text-align: center;
+}
+
+.sspl-login{
+    text-align: center;
+    margin-top: 1%;
+}
+
+
 .navbar{
     background-color: steelblue;
 }
@@ -48,7 +58,8 @@
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: rgb(110, 105, 105);
+    background-color: navy;
+    color: white;
     transition: 0.3s ease-in-out;
 }
 
@@ -171,7 +182,7 @@ h1{
     background-size: cover;
     width: 33%;
     height: 360px;
-    margin-top: 6%;
+    margin-top: 2%;
     box-shadow: 1px 1px 4px 2px rgb(85, 81, 81); 
     border-radius: 10px;
 }
@@ -183,7 +194,7 @@ h1{
     background-size: cover;
     width: 33%;
     height: 400px;
-    margin-top: 6%;
+    margin-top: 2%;
     box-shadow: 1px 1px 4px 2px rgb(85, 81, 81); 
     border-radius: 10px;
 }
