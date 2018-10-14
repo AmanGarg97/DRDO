@@ -27,7 +27,12 @@ session_start();
          aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">  
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+             <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="stud_profile.php" id="profile" class="nav-link">Profile</a>
+                </li>
+            </ul> 
             <ul class="navbar-nav ml-auto">
                 <div class="dropdown">
                     <button class="dropbtn username" id="login">

@@ -4,6 +4,7 @@ include 'common.php';
 -->
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,28 +49,33 @@ include 'common.php';
     </nav><br>
 
     <div class="row">
-        <div class="col-0 col-md-4"></div>
-        <div class="col-0 col-md-4">
+        <div class="col-0 col-md-3"></div>
+            <div class="col-0 col-md-6">
                 <div class="buttons">
-                        <a href="#" class="pd" onclick="toggleVisibility('Menu1');" id="menu-div">Personal details
-                           &nbsp;&nbsp;<i class="fas fa-greater-than">
-                        </i></a>
-                        &nbsp;
-                        <a href="#" onclick="toggleVisibility('Menu2');" id="menu-div">Academic Details
-                        </a>         
-                    </div>
-        </div>
-        <div class="col-0 col-md-4"></div>
+                    <a href="#" class="pd" onclick="toggleVisibility('Menu1');" id="menu-div">Personal details
+                    &nbsp;&nbsp;<i class="fas fa-greater-than">
+                    </i></a>
+                    &nbsp;
+                    <a href="#" onclick="toggleVisibility('Menu2');" id="menu-div">Academic Details
+                        &nbsp;&nbsp;<i class="fas fa-greater-than"></i>
+                    </a>&nbsp;
+                    <a href="#" onclick="toggleVisibility('Menu3');" id="menu-div">Professional Details</a>         
+                </div>
+            </div>
+            <div class="col-0 col-md-3"></div>
     </div>
+    
     
     <br>
     <!-- DIV 1 STARTS -->
 
+   <form action="update_backend.php" method="post" class="form" role="form" enctype="multipart/form-data">
+   
     <div class="container formbox1" id="Menu1">
 
         <h2 id="personal-heading">PERSONAL DETAILS</h2><br>
         
-        <form action="test.php" method="post"  class="form" role="form" enctype="multipart/form-data">
+        
 
             <div class="personal-form">
 
@@ -104,10 +110,6 @@ include 'common.php';
                 <div>
                     <label for="dob" id="birth-date">Birth Date</label>
                     <input type="date" class="form-control" id="dob" placeholder="DOB" name="bdate">
-<!--             <input type="date" data-date="" data-date-format="yyyy-mm-dd">-->
-
-               
-
                 </div>
                 <br>
 
@@ -176,14 +178,16 @@ include 'common.php';
             </div>
 -->
             <label for="telephone" id="tel-no">Tel-No</label><br>
-            <input id="telephone" type="tel" class="form-control" name="telno">
+            <input id="telephone" type="tel" class="form-control" name="telno" 
+            pattern="[0-6]{3}-[0-9]{8}" placeholder="011-25252525" maxlength="12">
             <br>
 
             <!-- phone no and email address -->
             <div class="row">
                 <div class="col">
                     <label for="phn-no" id="phone">Phone No.</label><br>
-                    <input id="phn-no" type="tel" class="form-control" name="phone">
+                    <input id="phn-no" type="tel" class="form-control" name="phone" 
+                    pattern="[0-9]{10}" maxlength="10">
                 </div>
     
                 <div class="col">
@@ -228,27 +232,110 @@ include 'common.php';
                 <option>IT</option>
                 <option>EEE</option>
             </select><br>
-        </div>
-        <br><br><br>
-        <div class="row">
-            <div class="col-0 col-md-5"></div>
-            <div class="col-0 col-md-2">
-                <button type="submit" class="btn" id="btn" name="submit">Submit</button>
-            </div>
-            <div class="col-0 col-md-5"></div>
+
+            <!-- subjects and faculty details sem wise -->
+
+            <!-- specialization -->
+            <label for="spec" id="specs">Specialization</label><br>
+            <textarea rows="2" cols="40" id="spec" name="spec"></textarea>
+            <br><br>
+
         </div>
 
     </div>
          
     <!-- DIV 2 ENDS -->
 
-  
+    <!-- DIV 3 STARTS -->
+   
+    <div class="container toAdd formbox3" id="Menu3" style="display:none;">
+
+        <h2 id="profession-heading">PROFESSSION</h2><br>
+
+        <div class="personal-form">
+
+        <!-- currently working -->
+        <label id="current-heading">Currently Working</label><br>
+        <div class="row">
+            <div class="col">
+                <label for="comp" id="compname">Company Name</label>
+                <input type="text" class="form-control" id="comp" name="comp1">
+            </div>
+            <div class="col">
+                <label for="pos" id="position">Position</label>
+                <input type="text" class="form-control" id="pos">
+            </div>
+            <div class="col">
+                <label for="date" id="from">From</label>
+                <input type="date" class="form-control" id="date">
+            </div>
+        </div><br>
+
+        <!-- previously working -->
+        <label id="current-heading">Previously Working</label>
+        <div class="row">
+            <div class="col">
+                <label for="prev" id="compname">Company Name</label>
+                <input type="text" class="form-control" id="prev" name="comp2">
+            </div>
+            <div class="col">
+                <label for="pos" id="position">Position</label>
+                <input type="text" class="form-control" id="pos">
+            </div>
+            <div class="col">
+                <label for="dte" id="from">From</label>
+                <input type="date" class="form-control" id="dte">
+            </div>
+            <div class="col">
+                <label for="dt" id="to">To</label>
+                <input type="date" class="form-control" id="dt">
+            </div>
+        </div><br>
+
+        <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" id="prev" name="comp3">
+                </div>
+                <div class="col">                        
+                    <input type="text" class="form-control" id="pos">
+                </div>
+                <div class="col">
+                    <input type="date" class="form-control" id="dte">
+                </div>
+                <div class="col">
+                    <input type="date" class="form-control" id="dt">
+                </div>
+        </div>
+        <br><br><br>
+        <div class="row">
+                <div class="col-0 col-md-5"></div>
+                <div class="col-0 col-md-2">
+                    <button name="update" type="submit" class="btn" id="btn">Update</button>
+                </div>
+                <div class="col-0 col-md-5"></div>
+        </div>
+
+        </div>
+
+   
+   
+   
+    </div>
+
+    <!-- DIV 3 ENDS -->
+
     </form>
+
+    <br>
+
+<br><br>    
+
+    
   
 
 <script>
   
-  var divs = ["Menu1", "Menu2"];
+  var divs = ["Menu1", "Menu2", "Menu3"];
 var visibleDivId = null;
 function toggleVisibility(divId) {
   if(visibleDivId === divId) {

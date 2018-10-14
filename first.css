@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(145, 197, 231);
+}
+
+h1{
+    text-align: center;
+}
+
+div{
+    text-align: center;
+}
+
+.main{
+    color: navy;
+    font-size: 220%;
+}
+
+a{
+    color: rgb(6, 73, 6);
+    font-size: 150%;
+}
+
+span{
+    color: rgb(11, 11, 102);
+
+}
