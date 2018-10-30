@@ -30,7 +30,7 @@ $pass1 = $_POST['pass'];
 $username = $first_name . " " . $last_name;
 }
 
-$user_registration_query1 = "insert into students(first_name,last_name,enroll_id,b_day,father_name,mother_name,address,state,pin_code,phone,email_id,telephone,password) values('$first_name' , '$last_name' , '$enroll_id' , '$b_date'  , '$fname' , '$mname' , '$add' , '$city' , '$pincode' , '$phone' , '$email' , '$tele' , '$pass1')" or
+$user_registration_query1 = "insert into students(first_name,last_name,enroll_id,b_day,father_name,mother_name,address,state,pin_code,phone,email_id,telephone,password,gender) values('$first_name' , '$last_name' , '$enroll_id' , '$b_date'  , '$fname' , '$mname' , '$add' , '$city' , '$pincode' , '$phone' , '$email' , '$tele' , '$pass1','$gender')" or
 die($user_registration_query1);
 $user_registration_submit = mysqli_query($con,$user_registration_query1) or die(mysqli_error($con));
 

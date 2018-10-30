@@ -7,8 +7,8 @@ if(isset($_POST['submit'])){
 $enroll = $_POST['enroll'];
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
-//$dob = $_POST['bdate'];
-$gen =$_POST['gen'];
+$dob = $_POST['bdate'];
+$gen =$_POST['gen[]'];
 $fname = $_POST['fname'];
 $mname = $_POST['mname'];
 $add = $_POST['add'];
@@ -24,7 +24,7 @@ $branch = $_POST['branch'];
 }
 
 
-$user_registration_query1 = "insert into students(first_name,last_name,enroll_id,father_name,mother_name,address,state,pin_code,phone,email_id,telephone) values('$firstname' , '$lastname' , '$enroll' ,  '$fname' , '$mname' , '$add' , '$state' , '$pin' , '$phone' , '$email' , '$tel')" or
+$user_registration_query1 = "insert into students(first_name,last_name,enroll_id,father_name,mother_name,address,state,pin_code,phone,email_id,telephone,b_day,gender) values('$firstname' , '$lastname' , '$enroll' ,  '$fname' , '$mname' , '$add' , '$state' , '$pin' , '$phone' , '$email' , '$tel','$dob','$gen')" or
 die($user_registration_query1);
 
 

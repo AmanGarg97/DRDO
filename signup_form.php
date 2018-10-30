@@ -120,7 +120,7 @@ include 'common.php';
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" value="" id="defaultCheck1" name="gen">
+                    <input class="form-check-input" type="radio" value="" id="defaultCheck1" name="gen[]">
                     <label class="form-check-label" for="defaultCheck1" id="gend">
                         Female
                     </label>

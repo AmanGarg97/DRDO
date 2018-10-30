@@ -16,12 +16,26 @@
     $pass = $_POST['pass1'];
     $cnf_pass = $_POST['pass2'];
     
-    $checkQuery = "SELECT * from students";
+    $checkQuery = "SELECT * from students where enroll_id = '$enroll'";
     
     $result = mysqli_query($con,$checkQuery) or die(mysqli_error($con));
     
      $flag = 1;
-    
+
+     /* Below is the code fo testing the working */
+//    $row = mysqli_fetch_array($result);
+//    if($row['first_name'] == $firstname)
+//    {
+//      echo "yes";
+//    }
+//
+//    else
+//    {
+//      
+//      echo $row['first_name'];
+//      echo "and entered is = ";
+//      echo $firstname;
+//    }
      while($row = mysqli_fetch_array($result)){
       
          if($enroll==$row['enroll_id']){
