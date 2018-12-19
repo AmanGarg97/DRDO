@@ -47,6 +47,7 @@ session_start();
     </nav>
     <br><br>
     
+    
 
     <div class="container d-print-block">
         <div class="row">
@@ -114,9 +115,11 @@ session_start();
                             </div>
 
                             <!-- profile image -->
+<!--
                             <div class="col-md-2">
                                 <div class="profile-box"></div>
                             </div>
+-->
 
                         </dl>
                     </div>

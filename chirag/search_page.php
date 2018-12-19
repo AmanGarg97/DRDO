@@ -27,9 +27,11 @@
         <a class="navbar-brand sticky-top" id="nav" href="index.html">
             <span class="bpit-nav">BPIT </span><span class="search-nav">Search</span>        
         </a>
+<!--
         <form class="">
             <input id="search" class="form-control" type="search" placeholder="Search..." aria-label="Search">
         </form>
+-->
 
         <button class="navbar-toggler" type="button" data-toggle="collapse"
          data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" 
@@ -62,8 +64,12 @@
     
     ?>
    
-   
-    <?php
+   <?php
+  
+  if(mysqli_num_rows($select_query_result) > 0)
+  {
+    
+     
         while($row = mysqli_fetch_array($select_query_result)){
 //                echo  "<li>".$row['first_name']."</li>";
             
@@ -99,7 +105,22 @@
              
     } 
     
-        ?>
+       
+  }
+  
+  
+  else{
+  
+  header("Location: search-not-found.html"); 
+  exit();
+ 
+  
+  }
+  
+  
+  ?>
+   
+   
    
 <!--
     <div class="container">
